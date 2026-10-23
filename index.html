@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+</head>
+<body>
+    <h1>Student Management System</h1>
+
+    <input type="text" id="name" placeholder="Enter student name">
+    <button onclick="addStudent()">Add Student</button>
+
+    <ul id="studentList"></ul>
+
+    <script>
+        function addStudent() {
+            let name = document.getElementById("name").value;
+
+            if (name.trim() !== "") {
+                let li = document.createElement("li");
+                li.textContent = name;
+
+                document.getElementById("studentList")
+                    .appendChild(li);
+
+                document.getElementById("name").value = "";
+            }
+        }
+    </script>
+</body>
+</html>
